@@ -26,13 +26,21 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-
-    implementation 'com.android.support:appcompat-v7:28.0.0'
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:28.0.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    compile "org.jetbrains.anko:anko-commons:$anko_version"
+
+    compile "org.jetbrains.anko:anko-appcompat-v7-commons:$anko_version"
+
+    compile "io.reactivex:rxkotlin:$rx_kotlin_version"
+    compile "io.reactivex:rxandroid:$rx_android_version"
+
+
 }
 repositories {
     mavenCentral()

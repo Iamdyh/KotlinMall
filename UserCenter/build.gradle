@@ -1,5 +1,10 @@
-apply plugin: 'com.android.library'
+if(isUserCenter.toBoolean()){
+    apply plugin: 'com.android.library'
+}else{
+    apply plugin: 'com.android.application'
+}
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion 28
@@ -23,15 +28,23 @@ android {
         }
     }
 
+    sourceSets {
+        main {
+            if(isUserCenter.toBoolean()){
+                manifest.srcFile 'src/main/release/AndroidManifest.xml'
+            }else{
+                manifest.srcFile 'src/main/debug/AndroidManifest.xml'
+            }
+        }
+    }
+
+
 }
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-
     testImplementation 'junit:junit:4.12'
+    compile project(':Provider')
+}
 
-    compile project(':BaseLibrary')
-}
-repositories {
-    mavenCentral()
-}
+
