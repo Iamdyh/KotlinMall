@@ -1,5 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 28
@@ -46,6 +47,7 @@ dependencies {
     compile "com.squareup.okhttp3:logging-interceptor:${ok_http_version}"
     compile "com.squareup.retrofit2:converter-gson:${retrofit_version}"
     compile "com.squareup.retrofit2:adapter-rxjava:${retrofit_version}"
+
 
 
 }

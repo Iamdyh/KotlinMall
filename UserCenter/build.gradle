@@ -5,6 +5,7 @@ if(isUserCenter.toBoolean()){
 }
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 28
@@ -45,6 +46,10 @@ dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     testImplementation 'junit:junit:4.12'
     compile project(':Provider')
+
+    //Dagger2
+    compile "com.google.dagger:dagger:$dagger_version"
+    kapt "com.google.dagger:dagger-compiler:$dagger_version"
 }
 
 

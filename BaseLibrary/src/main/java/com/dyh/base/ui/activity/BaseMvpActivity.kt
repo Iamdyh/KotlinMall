@@ -15,5 +15,6 @@ open class BaseMvpActivity<T: BasePresenter<*>>:BaseActivity(),BaseView{
 
     }
 
+
     lateinit var mPresenter:T
 }
