@@ -1,8 +1,6 @@
 package com.dyh.usercenter.ui
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
 import com.dyh.base.ui.activity.BaseMvpActivity
 import com.dyh.usercenter.R
 import com.dyh.usercenter.injection.component.DaggerUserComponent

@@ -15,6 +15,6 @@ class BaseApplication:Application() {
     }
 
     private fun initAppInjection(){
-        DaggerAppComponent.builder().appModule(AppModule(this)).build()
+       appComponent = DaggerAppComponent.builder().appModule(AppModule(this)).build()
     }
 }
